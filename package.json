@@ -1,0 +1,22 @@
+{
+  "name": "numbers-cli",
+  "version": "1.0.0",
+  "description": "CLI tool for http://numbersapi.com",
+  "main": "numbers-cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iquabius/numbers-cli.git"
+  },
+  "author": "Josias Iquabius <iquabius@gmail.com> (https://github.com/iquabius)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iquabius/numbers-cli/issues"
+  },
+  "homepage": "https://github.com/iquabius/numbers-cli#readme",
+  "dependencies": {
+    "yargs": "^9.0.1"
+  }
+}
