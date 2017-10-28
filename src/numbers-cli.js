@@ -22,4 +22,15 @@ const fetchFact = (type, number) => {
     .then(body => console.log(body));
 };
 
-fetchFact(argv.type, argv._[0]);
+const validateNumber = number => {
+  // The API accepts integers or the 'random' keyword
+  return Number.isInteger(number) || number === "random";
+};
+
+const number = argv._[0];
+
+if (validateNumber(number)) {
+  fetchFact(argv.type, number);
+} else {
+  console.log(`The provided number '${number}' is invalid`);
+}
