@@ -23,6 +23,10 @@ const fetchFact = (type, number) => {
 };
 
 const validateNumber = number => {
+  if (argv.type === "date") {
+    // A day of year in the form 'month/day' (eg. 2/29, 1/09, 04/1)
+    return new RegExp(/^\d+\/\d+$/g).test(number);
+  }
   // The API accepts integers or the 'random' keyword
   return Number.isInteger(number) || number === "random";
 };
