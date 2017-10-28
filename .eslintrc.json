@@ -3,11 +3,14 @@
     "es6": true,
     "node": true
   },
-  "extends": "eslint:recommended",
+  "extends": "prettier",
   "parser": "babel-eslint",
   "parserOptions": {
     "sourceType": "module"
   },
+  "plugins": [
+    "prettier"
+  ],
   "rules": {
     "indent": [
       "error",
