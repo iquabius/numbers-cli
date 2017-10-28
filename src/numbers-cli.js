@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fetch = require('node-fetch')
-const yargs = require('yargs')
+import fetch from 'node-fetch'
+import yargs from 'yargs'
 
 let argv = yargs.usage('Usage: $0 [options] number')
       .example('$0 -t trivia 69', 'Fetch trivia about the number 69')

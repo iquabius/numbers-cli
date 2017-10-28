@@ -4,7 +4,9 @@
   "description": "CLI tool for http://numbersapi.com",
   "main": "numbers-cli.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && mkdir dist && babel src -s -d dist"
   },
   "repository": {
     "type": "git",
@@ -19,5 +21,9 @@
   "dependencies": {
     "node-fetch": "^1.7.3",
     "yargs": "^9.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-latest": "^6.24.1"
   }
 }
