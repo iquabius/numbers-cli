@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/iquabius/numbers-cli#readme",
   "dependencies": {
+    "node-fetch": "^1.7.3",
     "yargs": "^9.0.1"
   }
 }
