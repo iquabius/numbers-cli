@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/iquabius/numbers-cli#readme",
   "dependencies": {
+    "cowsay": "^1.2.1",
     "node-fetch": "^1.7.3",
     "yargs": "^9.0.1"
   },
