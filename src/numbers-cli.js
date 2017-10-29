@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import cowsay from "cowsay";
 import fetch from "node-fetch";
 import yargs from "yargs";
 
@@ -12,6 +13,11 @@ let argv = yargs
     default: "trivia",
     describe: "Type of fact"
   })
+  .option("cow", {
+    alias: "c",
+    type: "boolean",
+    describe: "Should a cow say it?"
+  })
   .help("h")
   .alias("h", "help").argv;
 
@@ -19,7 +25,14 @@ const fetchFact = (type, number) => {
   console.log(`Fetching ${type} fact for number ${number}...`);
   fetch(`http://numbersapi.com/${number}/${type}`)
     .then(res => res.text())
-    .then(body => console.log(body));
+    .then(body => {
+      if (argv.cow) {
+        body = cowsay.say({
+          text: body
+        });
+      }
+      console.log(body);
+    });
 };
 
 const validateNumber = number => {
